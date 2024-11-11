@@ -1,16 +1,8 @@
-import { useState } from 'react';
+import Button from '@mui/material/Button';
 
-function MyButton() {
-    const [count, setCount] = useState(0)
-
-    function handleClick() {
-        setCount(count + 1);
-    };
-
+function MyButton({ count, onClick }) {
     return(
-        <button onClick={handleClick}>
-            Clicado {count} vezes.
-        </button>
+        <Button variant="outlined" onClick={ onClick }>Clicado {count} vezes.</Button>
     );
 };
 
