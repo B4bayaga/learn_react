@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../App.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -97,6 +98,9 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          <Box sx={{ display: { sm: 'flex', md: 'none' }, mr: 1, marginRight: 0.3}}>
+              <Logo height={30}/>
+          </Box>
           <Typography
             variant="h5"
             noWrap
@@ -104,10 +108,10 @@ function ResponsiveAppBar() {
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { sm: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'PT Sans',
-              fontSize: 22,
+              fontSize: 28,
               fontWeight: 700,
               lineHeight: 'normal',
               letterSpacing: '-1.4px',
@@ -122,7 +126,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#102B5E', display: 'block' }}
+                sx={{ mt: 0.5, color: '#102B5E', display: 'block' }}
               >
                 {page}
               </Button>
