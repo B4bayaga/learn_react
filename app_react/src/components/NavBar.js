@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './LogoAzul';
 
-const pages = ['Home', 'Contatar'];
+const pages = ['Home', 'Contratar'];
 const settings = ['Perfil', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ background: '#FAFAFF'}}>
+    <AppBar position="fixed" sx={{ background: '#FAFAFF'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' }, mr: 1 }}>
