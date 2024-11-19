@@ -1,5 +1,6 @@
 import * as React from 'react';
-import NavBar from './components/NavBar'
+import NavBarLogado from './components/NavBarLogado';
+import NavBarLogin from './components/NavBarLogin';
 import CarouselBlog from './components/carousel';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
@@ -7,31 +8,43 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import ActionAreaCard from './components/CardBlog';
 import Footer from './components/Footer';
+import imgVertical from './assets/img_vertical.jpg';
+import img1 from './assets/img1.jpg';
+import img2 from './assets/img2.jpg';
+import img3 from './assets/img3.jpg';
+import img4 from './assets/img4.jpg';
+import img5 from './assets/img5.jpg';
 
 
 function App() {
   const cards = [
     {
+      img: img1,
       occupation: 'Pedreiro',
       description: 'O que temos que ter sempre em mente é que a competitividade nas transações comerciais auxilia a preparação e a composição dos índices pretendidos.'
     },
     {
+      img: img2,
       occupation: 'Eletricista',
       description: 'A prática cotidiana prova que o desenvolvimento contínuo de distintas formas de atuação maximiza as possibilidades por conta das condições financeiras.'
     },
     {
+      img: img3,
       occupation: 'Encanador',
       description: 'O incentivo ao avanço tecnológico, assim como a expansão dos mercados mundiais facilita a criação do fluxo de informações.'
     },
     {
+      img: img4,
       occupation: 'Pintor',
       description: 'As experiências acumuladas demonstram que a execução dos pontos do programa estimula a padronização das direções preferenciais.'
     },
     {
+      img: img5,
       occupation: 'Pintor',
       description: 'As experiências acumuladas demonstram que a execução dos pontos do programa estimula a padronização das direções preferenciais.'
     },
     {
+      img: imgVertical,
       occupation: 'Pintor',
       description: 'As experiências acumuladas demonstram que a execução dos pontos do programa estimula a padronização das direções preferenciais.'
     },
@@ -39,7 +52,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBarLogin />
       <Box mb={10} />
 
       <CarouselBlog />
@@ -97,6 +110,7 @@ function App() {
                   <ActionAreaCard
                     occupation={card.occupation}
                     description={card.description}
+                    img={card.img}
                   />
                 </Box>
               </Grid>

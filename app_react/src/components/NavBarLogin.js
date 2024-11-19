@@ -17,7 +17,7 @@ import Logo from './LogoAzul';
 const pages = ['Home', 'Contratar'];
 const settings = ['Perfil', 'Logout'];
 
-function ResponsiveAppBar() {
+function NavBarLogin() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -99,7 +99,7 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Box sx={{ display: { sm: 'flex', md: 'none' }, mr: 1, marginRight: 0.3}}>
-              <Logo height={30}/>
+              <Logo height={28}/>
           </Box>
           <Typography
             variant="h5"
@@ -111,7 +111,7 @@ function ResponsiveAppBar() {
               display: { sm: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'PT Sans',
-              fontSize: 28,
+              fontSize: 26,
               fontWeight: 700,
               lineHeight: 'normal',
               letterSpacing: '-1.4px',
@@ -135,7 +135,26 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <AccountCircle sx={{ color: '#102B5E', fontSize: 32}}/>
+                <Button variant="contained" size='medium' href="#contained-buttons"
+                sx={{
+                    display: { xs: 'none', md: 'flex' },
+                    backgroundColor: '#004FFA',
+                    '&:hover': {
+                      backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
+                    },
+                }}>
+                    Login
+                </Button>
+                <Button variant="contained" size='small' href="#contained-buttons"
+                sx={{
+                    display: { xs: 'flex', md: 'none' },
+                    backgroundColor: '#004FFA',
+                    '&:hover': {
+                      backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
+                    },
+                }}>
+                    Login
+                </Button>
               </IconButton>
             </Tooltip>
             <Menu
@@ -166,4 +185,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default NavBarLogin;

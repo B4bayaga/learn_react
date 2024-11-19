@@ -6,9 +6,14 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
-import Pedreiro from '../assets/pedreiro.jpg';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
-function ActionAreaCard({ occupation, description }) {
+
+function ActionAreaCard({ occupation, description, img, textoMensagem, numeroContato }) {
+  const codificarMensagem = (textoMensagem) => {
+    return encodeURIComponent(textoMensagem);
+  };
+
   return (
     <Card sx={{
       maxWidth: 345,
@@ -23,7 +28,7 @@ function ActionAreaCard({ occupation, description }) {
         <CardMedia
           component="img"
           height="220"
-          image={Pedreiro}
+          image={ img }
           alt="green iguana"
         />
         <CardContent>
@@ -52,10 +57,12 @@ function ActionAreaCard({ occupation, description }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary"
+        <Button variant="contained" size="small" startIcon={<WhatsAppIcon />}
         sx={{
           fontFamily: 'PT Sans',
-        }}>
+        }}
+        onClick={() => window.open(`https://wa.me/${numeroContato}?text=${codificarMensagem}`, '_blank')}
+        >
           Contato
         </Button>
       </CardActions>
