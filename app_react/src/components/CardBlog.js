@@ -18,6 +18,7 @@ function ActionAreaCard({ occupation, description, img, textoMensagem, numeroCon
     <Card sx={{
       maxWidth: 345,
       borderRadius: '6px 6px 0 0',
+      marginBottom: '16px',
       width: '100%', // Faz o card ocupar 100% da largura da linha
         '@media (max-width: 440px)': {
           maxWidth: '100%', // Ajuste para telas menores que 440px

@@ -1,21 +1,21 @@
 import * as React from 'react';
-import NavBarLogin from './components/NavBarLogin';
-import CarouselBlog from './components/carousel';
+import NavBarLogin from '../components/NavBarLogin';
+import CarouselBlog from '../components/carousel';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import ActionAreaCard from './components/CardBlog';
-import Footer from './components/Footer';
-import imgVertical from './assets/img_vertical.jpg';
-import img1 from './assets/img1.jpg';
-import img2 from './assets/img2.jpg';
-import img3 from './assets/img3.jpg';
-import img4 from './assets/img4.jpg';
-import img5 from './assets/img5.jpg';
+import ActionAreaCard from '../components/CardBlog';
+import Footer from '../components/Footer';
+import imgVertical from '../assets/img_vertical.jpg';
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img3.jpg';
+import img4 from '../assets/img4.jpg';
+import img5 from '../assets/img5.jpg';
 
 
-function App() {
+function Home() {
   const cards = [
     {
       img: img1,
@@ -126,4 +126,4 @@ function App() {
   );
 };
 
-export default App;
+export default Home;
