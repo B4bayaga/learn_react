@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './LogoAzul';
 
+
 const pages = ['Home', 'Contratar'];
 const settings = ['Perfil', 'Logout'];
 
@@ -134,7 +135,7 @@ function NavBarLogin() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Button variant="contained" size='medium' href="#contained-buttons"
+                <Button variant="contained" size='medium' href="/login"
                 sx={{
                     display: { xs: 'none', md: 'flex' },
                     backgroundColor: '#004FFA',
@@ -144,7 +145,7 @@ function NavBarLogin() {
                 }}>
                     Login
                 </Button>
-                <Button variant="contained" size='small' href="#contained-buttons"
+                <Button variant="contained" size='small' href="/login"
                 sx={{
                     display: { xs: 'flex', md: 'none' },
                     backgroundColor: '#004FFA',

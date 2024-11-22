@@ -2,6 +2,7 @@ import * as React from 'react';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles';
+import LoginNavBar from '../components/LoginNavBar';
 
 
 // preview-start
@@ -35,10 +36,13 @@ const signIn = async (provider, formData) => {
 export default function NotificationsSignInPageError() {
   const theme = useTheme();
   return (
+    <>
+    <LoginNavBar />
     // preview-start
     <AppProvider theme={theme}>
       <SignInPage signIn={signIn} providers={providers} />
     </AppProvider>
     // preview-end
+    </>
   );
 }
