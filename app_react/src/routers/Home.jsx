@@ -1,12 +1,12 @@
 import * as React from 'react';
 import NavBarLogin from '../components/NavBarLogin';
-import CarouselBlog from '../components/carousel';
+import CarouselPubli from '../components/CarouselPubli.jsx';
 import { Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import ActionAreaCard from '../components/CardBlog';
-import Footer from '../components/Footer';
+import CardBlog from '../components/CardBlog.jsx';
+import Footer from '../components/Footer.jsx';
 import imgVertical from '../assets/img_vertical.jpg';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
@@ -54,7 +54,7 @@ function Home() {
       <NavBarLogin />
       <Box mb={10} />
 
-      <CarouselBlog />
+      <CarouselPubli />
 
       <Box mb={8} />
 
@@ -106,7 +106,7 @@ function Home() {
                 className="flex"
               >
                 <Box className="w-full p-2">
-                  <ActionAreaCard
+                  <CardBlog
                     occupation={card.occupation}
                     description={card.description}
                     img={card.img}

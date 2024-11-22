@@ -1,13 +1,13 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ImageComponent from './ImageComponent';
+import ImageComponent from './ImageComponent.jsx';
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
 import img4 from '../assets/img4.jpg';
 import img5 from '../assets/img5.jpg';
 
-function CarouselBlog() {
+function CarouselPubli() {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -67,4 +67,4 @@ function CarouselBlog() {
     );
 };
 
-export default CarouselBlog
+export default CarouselPubli

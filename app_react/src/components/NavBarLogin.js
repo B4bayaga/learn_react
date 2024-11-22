@@ -15,7 +15,6 @@ import Logo from './LogoAzul';
 
 
 const pages = ['Home', 'Contratar'];
-const settings = ['Perfil', 'Logout'];
 
 function NavBarLogin() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -132,53 +131,27 @@ function NavBarLogin() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Button variant="contained" size='medium' href="/login"
-                sx={{
-                    display: { xs: 'none', md: 'flex' },
-                    backgroundColor: '#004FFA',
-                    '&:hover': {
-                      backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
-                    },
-                }}>
-                    Login
-                </Button>
-                <Button variant="contained" size='small' href="/login"
-                sx={{
-                    display: { xs: 'flex', md: 'none' },
-                    backgroundColor: '#004FFA',
-                    '&:hover': {
-                      backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
-                    },
-                }}>
-                    Login
-                </Button>
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px', color: '#0057FF' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center', color: '#102B5E' }}>{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box >
+            <Button variant="contained" size='medium' href="/login"
+            sx={{
+                display: { xs: 'none', md: 'flex' },
+                backgroundColor: '#004FFA',
+                '&:hover': {
+                  backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
+                },
+            }}>
+            Login
+            </Button>
+            <Button variant="contained" size='small' href="/login"
+            sx={{
+                display: { xs: 'flex', md: 'none' },
+                backgroundColor: '#004FFA',
+                '&:hover': {
+                  backgroundColor: '#0037CC', // Cor ao passar o mouse (opcional)
+                },
+            }}>
+                Login
+            </Button>
           </Box>
         </Toolbar>
       </Container>

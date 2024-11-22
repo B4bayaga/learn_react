@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
-function ActionAreaCard({ occupation, description, img, textoMensagem, numeroContato }) {
+function CardBlog({ occupation, description, img, textoMensagem, numeroContato }) {
   const codificarMensagem = (textoMensagem) => {
     return encodeURIComponent(textoMensagem);
   };
@@ -71,4 +71,4 @@ function ActionAreaCard({ occupation, description, img, textoMensagem, numeroCon
   );
 }
 
-export default ActionAreaCard
+export default CardBlog
