@@ -1,12 +1,9 @@
 import * as React from 'react';
 import '../App.css';
-import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Logo from './LogoAzul';
 
 
 function LoginNavBar() {
@@ -14,11 +11,6 @@ function LoginNavBar() {
     <AppBar position="fixed" sx={{ background: '#FAFAFF'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
-          <Box sx={{ display: { xs: 'flex' }, mr: 1 }}>
-            <Link to="/">
-              <Logo height={26} />
-						</Link>
-          </Box>
           <Typography
             variant="h6"
             noWrap
